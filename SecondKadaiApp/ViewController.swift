@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var nameInput: UITextView!
+    
+    @IBOutlet weak var nameInput: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let secondViewController:SecondViewController = segue.destination as! SecondViewController
-        secondViewController.name = nameInput.text
+        secondViewController.name = nameInput.text!
         
     }
     
